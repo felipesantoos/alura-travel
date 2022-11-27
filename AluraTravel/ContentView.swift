@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         GeometryReader { view in
-            VStack() {
-                VStack() {
+            VStack {
+                VStack {
                     Text("alura travel")
                         .foregroundColor(.white)
                         .font(.custom("Avenir Black", size: 24.0))
@@ -25,11 +25,33 @@ struct ContentView: View {
                         .font(.custom("Avenir Black", size: 24.0))
                         .frame(minWidth: 0.0, maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 32.0)
-                        .padding(.bottom, 16.0)
+                        .padding(.bottom, 32.0)
                 }
                 .background(.purple)
                 .frame(width: view.size.width)
-                
+                HStack {
+                    Button(action: {}) {
+                        Text("Hotels")
+                            .foregroundColor(.white)
+                            .font(.custom("Avenir Medium", size: 16.0))
+                    }
+                    .frame(width: 100.0, height: 50.0)
+                    .overlay(RoundedRectangle(cornerRadius: 8.0)
+                        .stroke(.blue, lineWidth: 8.0))
+                    .background(.blue)
+                    .offset(x: 50.0)
+                    Spacer()
+                    Button(action: {}) {
+                        Text("Packages")
+                            .foregroundColor(.white)
+                            .font(.custom("Avenir Medium", size: 16.0))
+                    }
+                    .frame(width: 100.0, height: 50.0)
+                    .overlay(RoundedRectangle(cornerRadius: 8.0).stroke(.orange, lineWidth: 8.0))
+                    .background(.orange)
+                    .offset(x: -50.0)
+                }
+                .offset(y: -25.0)
                 List {
                     Text("Rio de Janeiro")
                     Text("Ceará")
