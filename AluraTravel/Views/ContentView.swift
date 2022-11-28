@@ -9,14 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        GeometryReader { view in
-            VStack {
-                HeaderView()
-                List(travels) { travel in
-                    TravelCellView(travel: travel)
+        NavigationView {
+            GeometryReader { view in
+                VStack {
+                    HeaderView()
+                    List(travels) { travel in
+                        NavigationLink(destination: MapView(coordinates: travel.localization).navigationBarTitle("Localization")) {
+                            TravelCellView(travel: travel)
+                        }
+                    }
                 }
             }
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
