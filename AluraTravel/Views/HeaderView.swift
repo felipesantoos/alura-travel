@@ -21,13 +21,13 @@ struct HeaderView: View {
                         .foregroundColor(.white)
                         .font(.custom("Avenir Book", size: getHeaderTextSize()))
                         .frame(minWidth: 0.0, maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 32.0)
+                        .padding(.leading, hsc == .compact ? 32.0 : 64.0)
                     Text("BRAZIL")
                         .foregroundColor(.white)
                         .font(.custom("Avenir Black", size: getHeaderTextSize()))
                         .frame(minWidth: 0.0, maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 32.0)
-                        .padding(.bottom, 40.0)
+                        .padding(.leading, hsc == .compact ? 32.0 : 64.0)
+                        .padding(.bottom, hsc == .compact ? 40.0 : 80.0)
                 }
                 .background(.purple)
                 .frame(width: view.size.width)
@@ -55,7 +55,7 @@ struct HeaderView: View {
                 }
                 .offset(y: -getButtonHeaderVerticalOffset())
             }
-        }.frame(maxHeight: hsc == .compact ? 180 : 290.0)
+        }.frame(maxHeight: hsc == .compact ? 192.0 : 384.0)
     }
     
     func getHeaderTextSize() -> Double {
@@ -88,10 +88,10 @@ struct HeaderView_Previews: PreviewProvider {
         Group {
             HeaderView()
                 .environment(\.horizontalSizeClass, .compact)
-                .previewLayout(.fixed(width: 393.0, height: 180.0))
+                .previewLayout(.fixed(width: 393.0, height: 192.0))
             HeaderView()
                 .environment(\.horizontalSizeClass, .regular)
-                .previewLayout(.fixed(width: 1024.0, height: 290.0))
+                .previewLayout(.fixed(width: 1024.0, height: 384.0))
         }
     }
 }
