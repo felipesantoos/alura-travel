@@ -28,7 +28,6 @@ struct TravelCellView: View {
             }
         }
         .frame(height: hsc == .compact ? 270.0 : 540.0)
-//        .background(.red)
     }
 }
 

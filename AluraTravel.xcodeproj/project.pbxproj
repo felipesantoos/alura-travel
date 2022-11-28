@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		554861072935048C0050A1B1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554861062935048C0050A1B1 /* MapView.swift */; };
 		554ACC692932B003005F8923 /* notes in Resources */ = {isa = PBXBuildFile; fileRef = 554ACC682932B003005F8923 /* notes */; };
 		5578829129339DFA00B5C33E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578828F29339DFA00B5C33E /* Data.swift */; };
 		5578829229339DFA00B5C33E /* Travel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578829029339DFA00B5C33E /* Travel.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		554861062935048C0050A1B1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		554ACC682932B003005F8923 /* notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = notes; sourceTree = "<group>"; };
 		5578828F29339DFA00B5C33E /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		5578829029339DFA00B5C33E /* Travel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Travel.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				55FE75A92931410400BD7F8D /* ContentView.swift */,
 				557882982933A5EC00B5C33E /* HeaderView.swift */,
 				5578829A2933A78A00B5C33E /* TravelCellView.swift */,
+				554861062935048C0050A1B1 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554861072935048C0050A1B1 /* MapView.swift in Sources */,
 				557882992933A5EC00B5C33E /* HeaderView.swift in Sources */,
 				5578829229339DFA00B5C33E /* Travel.swift in Sources */,
 				55FE75AA2931410400BD7F8D /* ContentView.swift in Sources */,
