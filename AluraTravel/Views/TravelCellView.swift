@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TravelCellView: View {
+    @Environment(\.horizontalSizeClass) var hsc
     var travel: Travel
     var body: some View {
         VStack(alignment: .leading) {
             Text(travel.title)
             Image(travel.image)
                 .resizable()
-                .frame(height: 200.0)
+                .frame(height: hsc == .compact ? 200.0 : 500.0)
             HStack {
                 Text(travel.dayQuantity)
                 Spacer()
